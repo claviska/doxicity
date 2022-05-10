@@ -66,6 +66,7 @@ export default {
     meta: {
       title: 'Doxicity',
       description: 'Write amazing docs. Fast, free, and flexible.',
+      image: '/assets/share.png',
       twitterCreator: 'doxicityApp'
     }
   }

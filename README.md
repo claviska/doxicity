@@ -1,8 +1,14 @@
 # Doxicity 📗
 
-_Write amazing docs. Fast, free, and flexible._
+Doxicity turns a directory of markdown files into a robust, accessible documentation website. You can configure it, add plugins, and use Handlebars expressions to do amazing things.
 
-Built with love in New Hampshire.
+It's fast, free, and flexible.
+
+Designed in New Hampshire by [Cory LaViska](https://twitter.com/claviska).
+
+🚨 Doxicity is very young and still experimental, so there may be breaking changes as the project evolves. Please ask questions on the [discussion board](https://github.com/claviska/doxicity/discussions) and post bugs to the [issue tracker](https://github.com/claviska/doxicity/issues).
+
+---
 
 ## Overview
 

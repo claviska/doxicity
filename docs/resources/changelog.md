@@ -11,6 +11,10 @@ Doxicity follows [Semantic Versioning](https://semver.org/). Breaking changes wi
 During the beta period, these restrictions may be relaxed in the event of a mission-critical bug. 🐛
 :::
 
+## Next
+
+- Fixed a bug where the sidebar menu remained open on mobile [#3](https://github.com/claviska/doxicity/issues/3)
+
 ## 1.0.0-beta.4
 
 - Let's just call this the initial release

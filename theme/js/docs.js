@@ -12,11 +12,22 @@ function toggleTheme() {
 
 const menuToggle = document.getElementById('docs-menu-toggle');
 const themeToggle = document.getElementById('docs-theme-toggle');
+const sidebar = document.getElementById('docs-sidebar');
 
 // Toggle the menu
 if (menuToggle) {
   menuToggle?.addEventListener('click', toggleMenu);
 }
+
+// If a sidebar link is clicked, close the menu if we're on mobile
+sidebar.addEventListener('click', event => {
+  const isMobile = document.body.clientWidth <= 600;
+  const a = event.target.closest('a');
+
+  if (a && isMobile) {
+    toggleMenu();
+  }
+});
 
 // Toggle the theme
 if (themeToggle) {

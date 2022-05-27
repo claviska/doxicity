@@ -985,7 +985,7 @@ html:not(.docs-with-sidebar) #docs-content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(
     10deg,
     hsl(240deg 32% 11%) 0%,
@@ -999,6 +999,7 @@ html:not(.docs-with-sidebar) #docs-content {
     hsl(159deg 100% 24%) 89%,
     hsl(140deg 62% 32%) 100%
   );
+  background-attachment: fixed;
   color: var(--docs-color-neutral-1000);
   background-size: cover;
   padding: 2rem;
@@ -1022,6 +1023,16 @@ html:not(.docs-with-sidebar) #docs-content {
   align-items: center;
   gap: 2rem;
   margin-top: 3rem;
+}
+
+@media screen and (max-width: 500px) {
+  .docs-splash {
+    padding-bottom: 5rem;
+  }
+
+  .docs-splash__cta {
+    flex-direction: column;
+  }
 }
 
 .docs-splash__button {

@@ -118,7 +118,7 @@ meta:
 
 ## Special Properties
 
-Avoid using property names that begin with `$`, as these are reserved for Doxicity. Currently, there is only one reserved property.
+Avoid using property names that begin with `$`, as these are reserved for Doxicity. The following special properties are available.
 
 | Name              | Type     | Description                                                                                                                                      |
 | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -129,7 +129,7 @@ Avoid using property names that begin with `$`, as these are reserved for Doxici
 
 As mentioned earlier, [Handlebars expressions](https://handlebarsjs.com/guide/expressions.html) are used to consume data in your pages. You can output selected data, selectively render content using conditionals, loop through arrays and objects, and even pass data to [partials](/concepts/partials.html).
 
-Let's consider the following markdown file.
+Let's assume we have the following data.
 
 ```js
 const data = {

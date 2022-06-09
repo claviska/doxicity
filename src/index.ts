@@ -83,9 +83,15 @@ if (options.dir) {
 
 // Load the user's config
 const userConfigFilename = path.join(targetDirectory, 'doxicity.config.js');
+const userConfigModuleFilename = path.join(targetDirectory, 'doxicity.config.mjs');
+
 if (existsSync(userConfigFilename)) {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   const userConfig = (await import(userConfigFilename)).default as Partial<DoxicityConfig>;
+  config = merge(defaultConfig, userConfig);
+} else if (existsSync(userConfigModuleFilename)) {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  const userConfig = (await import(userConfigModuleFilename)).default as Partial<DoxicityConfig>;
   config = merge(defaultConfig, userConfig);
 } else {
   config = { ...defaultConfig };

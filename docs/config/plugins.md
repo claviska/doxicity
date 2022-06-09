@@ -31,29 +31,29 @@ Plugins are be executed in the same order they appear in the `plugins` array.
 
 The following plugins ship with the official Doxicity package. This project is still young, so for now please see the source of each plugin (linked below) to see which config options are available. Additional third-party plugins will soon be found on [npm](https://www.npmjs.com/search?q=doxicity).
 
-- [`activeLinks`](https://github.com/claviska/doxicity/blob/main/src/plugins/active-links/active-links.ts): Adds a custom class name to active links on the page.
-- [`anchorHeadings`](https://github.com/claviska/doxicity/blob/main/src/plugins/anchor-headings/anchor-headings.ts): Turns headings into deep-linkable anchors with unique ids.
-- [`beautify`](https://github.com/claviska/doxicity/blob/main/src/plugins/beautify/beautify.ts): Runs the resulting HTML through JS Beautify to improve formatting and indentation.
-- [`copyCode`](https://github.com/claviska/doxicity/blob/main/src/plugins/copy-code/copy-code.ts): Adds a button to each code field that copies the code when clicked.
-- [`customTitle`](https://github.com/claviska/doxicity/blob/main/src/plugins/custom-title/custom-title.ts): Adds a custom prefix and/or suffix to each page's `<title>`
-- [`externalLinks`](https://github.com/claviska/doxicity/blob/main/src/plugins/external-links/external-links.ts): Makes external links safe by adding `rel="noopener noreferrer"` and optionally opens them in a new window.
-- [`highlightCode`](https://github.com/claviska/doxicity/blob/main/src/plugins/highlight-code/highlight-code.ts): Highlights code fields using Prism. All languages that Prism supports work by default. Highlighting is done at build time, so no JavaScript is shipped to the client.
-- [`iconAddon`](https://github.com/claviska/doxicity/blob/main/src/plugins/icon-addon/icon-addon.ts): Adds a custom icon to the icon addons container, e.g. links to GitHub, Twitter, etc. Supports both custom SVG icons and a handful of built-ins.
-- [`search`](https://github.com/claviska/doxicity/blob/main/src/plugins/search/search.ts): Adds an accessible, full-text search client to your docs. Powered by [Lunr](https://lunrjs.com/).
-- [`smoothLinks`](https://github.com/claviska/doxicity/blob/main/src/plugins/smooth-links/smooth-links.ts): Makes in-page links scroll smoothly.
-- [`tableOfContents`](https://github.com/claviska/doxicity/blob/main/src/plugins/table-of-contents/table-of-contents.ts): Generates a table of contents. You can select which headings are selected and where the TOC gets rendered. Can be used multiple times per page.
-- [`tableScroll`](https://github.com/claviska/doxicity/blob/main/src/plugins/table-scroll/table-scroll.ts): Adds a wrapper around table elements, allowing them to scroll horizontally as needed on smaller screens.
-- [`typography`](https://github.com/claviska/doxicity/blob/main/src/plugins/typography/typography.ts): Converts regular quotes to smart quotes and other common typographical symbols such as en dash, em dash, ellipsis, and more.
+- [`activeLinksPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/active-links/active-links.ts): Adds a custom class name to active links on the page.
+- [`anchorHeadingsPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/anchor-headings/anchor-headings.ts): Turns headings into deep-linkable anchors with unique ids.
+- [`beautifyPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/beautify/beautify.ts): Runs the resulting HTML through JS Beautify to improve formatting and indentation.
+- [`copyCodePlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/copy-code/copy-code.ts): Adds a button to each code field that copies the code when clicked.
+- [`customTitlePlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/custom-title/custom-title.ts): Adds a custom prefix and/or suffix to each page's `<title>`
+- [`externalLinksPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/external-links/external-links.ts): Makes external links safe by adding `rel="noopener noreferrer"` and optionally opens them in a new window.
+- [`highlightCodePlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/highlight-code/highlight-code.ts): Highlights code fields using Prism. All languages that Prism supports work by default. Highlighting is done at build time, so no JavaScript is shipped to the client.
+- [`iconAddonPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/icon-addon/icon-addon.ts): Adds a custom icon to the icon addons container, e.g. links to GitHub, Twitter, etc. Supports both custom SVG icons and a handful of built-ins.
+- [`searchPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/search/search.ts): Adds an accessible, full-text search client to your docs. Powered by [Lunr](https://lunrjs.com/).
+- [`smoothLinksPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/smooth-links/smooth-links.ts): Makes in-page links scroll smoothly.
+- [`tableOfContentsPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/table-of-contents/table-of-contents.ts): Generates a table of contents. You can select which headings are selected and where the TOC gets rendered. Can be used multiple times per page.
+- [`tableScrollPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/table-scroll/table-scroll.ts): Adds a wrapper around table elements, allowing them to scroll horizontally as needed on smaller screens.
+- [`typographyPlugin`](https://github.com/claviska/doxicity/blob/main/src/plugins/typography/typography.ts): Converts regular quotes to smart quotes and other common typographical symbols such as en dash, em dash, ellipsis, and more.
 
 Example usage:
 
 ```js
 // doxicity.config.js
-import { activeLinks, anchorHeadings, highlightCode, search } from 'doxicity/plugins';
+import { activeLinks, anchorHeadings, highlightCode, search } from 'doxicity/dist/plugins.js';
 
 export default {
   // ...
-  plugins: [activeLinks(), anchorHeadings(), highlightCode(), search()]
+  plugins: [activeLinksPlugin(), anchorHeadingsPlugin(), highlightCodePlugin(), searchPlugin()]
 };
 ```
 

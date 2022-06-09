@@ -9,7 +9,7 @@ A config file lets you customize assets, data, plugins, and every other aspect o
 
 ## Sample Config
 
-You can configure your Doxicity site by adding a file called `doxicity.config.js` to your project's root directory. Doxicity expects your config file to be an ES Module. You can use this template as a starting point.
+You can configure your Doxicity site by adding a file called `doxicity.config.js` to your project's root directory. Doxicity expects your config file to be an ES Module. If your project is not [configured to be a module](https://nodejs.org/api/packages.html#modules-packages), you can name your configuration file `doxicity.config.mjs` to avoid NodeJS errors.  You can use this template as a starting point.
 
 ```js
 // doxicity.config.js
